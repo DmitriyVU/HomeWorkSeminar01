@@ -9,27 +9,22 @@ Console.Clear();
 
 Console.WriteLine("Привет, введи Имя:");
 string name = (Console.ReadLine());
-
 Console.WriteLine(name + ",введите 1-ое число:");
 int Num1 = Convert.ToInt32(Console.ReadLine());
-
-Console.WriteLine(name +",введите 2-ое число");
+Console.WriteLine(name + ",введите 2-ое число");
 int Num2 = Convert.ToInt32(Console.ReadLine());
-
-Console.WriteLine(name +",введите 3-е число");
+Console.WriteLine(name + ",введите 3-е число");
 int Num3 = Convert.ToInt32(Console.ReadLine());
-if (Num1 > Num2)
+int max = Num1;
+
+if (Num2 > max)
 {
-    if (Num1 > Num3)
-    {
-        Console.WriteLine(name + $",внимание! максимальное значение = {Num1} ");
-    }
+    max = Num2;
 }
-else if (Num3 > Num2)
+
+if (Num3 > max)
 {
-    Console.WriteLine(name + $",внимание! максимальное значение = {Num3} ");
+    max = Num3;
 }
-else
-{
-    Console.WriteLine(name + $",внимание! максимальное значение = {Num2} ");
-}
+
+Console.WriteLine($"Наибольшее из введённых чисел = {max}");
